@@ -34,9 +34,5 @@ func main() {
 		}
 		fmt.Println(output)
 		time.Sleep(10 * time.Millisecond)
-
-		if i == 63 {
-			i = 0
-		}
 	}
 }
