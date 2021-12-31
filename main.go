@@ -25,14 +25,20 @@ func main() {
 		output := fmt.Sprintf("%s%s%s", fmt.Sprintf("%X", int(R)), fmt.Sprintf("%X", int(G)), fmt.Sprintf("%X", int(B)))
 
 		for _, match := range matches {
+
 			file, err := os.Create(match)
+
 			if err != nil {
 				fmt.Println(err)
 			}
+
 			defer file.Close()
+
 			file.WriteString(output)
 		}
+
 		fmt.Println(output)
+
 		time.Sleep(10 * time.Millisecond)
 	}
 }
